@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="oPx17ARuBj0nnP5Iz6mkikVrrKQYCmKltj5g5yw5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title>natalialira.com - Home</title>
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/0198f708-6883-43fb-85d4-525257fce00a.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/0198f708-6883-43fb-85d4-525257fce00a.css"/> -->
+    <link rel="stylesheet" type="text/css" href="https://francescatorzo.it/css/builds/app.css?1670498307">
+</head>
+<body>
+    <header class="smoothfont noselect">
+        <a class="logo" href="index.html">Natalia Lira</a>
+        <nav>
+            <ul class="nav0">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="work.html">Projects</a>
+                    <ul class="nav1">
+                        <li><a href="/works/e11-chaosmos-2020">e11 - chaosmos, 2020</a></li>
+                        <!-- ... (otros elementos del menú) ... -->
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <style>
+            .header-container {
+                text-align: center;
+            }
+            
+            .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+                overflow: hidden;
+                margin-top: 150px;
+            }
+            
+            .image {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: opacity 0.5s;
+            }
+            
+            .image.active {
+                opacity: 1;
+            }
+            
+            .image.hidden {
+                opacity: 0;
+            }
+        </style>
+        
+        <div class="image-container">
+            <img class="image image-size active" src="HOME/1.jpg" alt="Imagen 1" data-href="work.html">
+            <img class="image image-size hidden" src="HOME/2.jpg" alt="Imagen 2" data-href="work.html">
+            <img class="image image-size hidden" src="HOME/3.jpg" alt="Imagen 3" data-href="work.html">
+            <img class="image image-size hidden" src="HOME/4.jpg" alt="Imagen 4" data-href="work.html">
+            <img class="image image-size hidden" src="HOME/5.jpg" alt="Imagen 5" data-href="work.html">
+            <img class="image image-size hidden" src="HOME/6.jpg" alt="Imagen 6" data-href="work.html">
+            <img class="image image-size hidden" src="HOME/IMG_6422.JPG" alt="Imagen 7" data-href="work.html">
+        </div>
+        
+        <script type="text/javascript" src="https://francescatorzo.it/js/builds/app.js?1670498307"></script>
+        <script>
+            var images = document.querySelectorAll('.image');
+            var currentIndex = 0;
+
+            function hideAllImages() {
+                images.forEach(function(image) {
+                    image.classList.add('hidden');
+                    image.classList.remove('active');
+                });
+            }
+
+            function showNextImage() {
+                hideAllImages();
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+                images[currentIndex].classList.remove('hidden');
+            }
+
+            // Ocultar todas las imágenes excepto la primera
+            hideAllImages();
+            images[currentIndex].classList.add('active');
+            images[currentIndex].classList.remove('hidden');
+
+            setInterval(showNextImage, 3000);
+
+            // Agregar el evento de clic a cada imagen
+            images.forEach(function(image) {
+                image.addEventListener('click', function() {
+                    var href = image.getAttribute('data-href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        </script>
+    </header>
+    <div class="sideMenuToggle">
+        <div class="menu-btn"></div>
+    </div>
+    <div id="app" class="page-transition"></div>
+    <script type="text/javascript" src="https://francescatorzo.it/js/builds/app.js?1670498307"></script>
+</body>
+</html>

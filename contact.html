@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="oPx17ARuBj0nnP5Iz6mkikVrrKQYCmKltj5g5yw5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title>natalialira.com - Home</title>
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/0198f708-6883-43fb-85d4-525257fce00a.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/0198f708-6883-43fb-85d4-525257fce00a.css"/> -->
+    <link rel="stylesheet" type="text/css" href="https://francescatorzo.it/css/builds/app.css?1670498307">
+
+    <style>
+        body {
+            overflow-y: scroll; /* Agrega desplazamiento vertical a la página */
+            margin: 0; /* Elimina el margen predeterminado del cuerpo */
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 20px; /* Añade margen inferior para separar el encabezado del contenedor de imágenes */
+            position: fixed; /* Fija la posición del encabezado */
+            top: 0; /* Establece el encabezado en la parte superior de la ventana */
+            width: 100%; /* Establece el ancho del encabezado al 100% */
+            background-color: #fff; /* Cambia el color de fondo del encabezado si es necesario */
+            z-index: 999; /* Asegura que el encabezado aparezca por encima de otros elementos */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 70px); /* Establece la altura mínima del contenedor de imágenes teniendo en cuenta la altura del encabezado */
+            overflow: auto; /* Habilita el desplazamiento dentro del contenedor */
+            margin-top: 70px; /* Ajusta el margen superior para separar el encabezado */
+        }
+
+        .image {
+            width: 100%; /* Establece el ancho de las imágenes al 100% del contenedor */
+            object-fit: contain; /* Ajusta las imágenes dentro del tamaño especificado sin distorsión */
+            transition: opacity 0.5s; /* Agrega una transición de opacidad suave */
+            pointer-events: none; /* Deshabilita los eventos del mouse en la imagen */
+        }
+
+        .image.active {
+            opacity: 1; /* Establece la opacidad en 1 para la imagen activa */
+        }
+
+        .image.hidden {
+            opacity: 0; /* Establece la opacidad en 0 para las imágenes ocultas */
+        }
+    </style>
+</head>
+<body>
+    <header class="smoothfont noselect">
+        <div class="header-container">
+            <a class="logo" href="index.html">Natalia Lira</a>
+            <nav>
+                <ul class="nav0">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="image-container">
+        <a><img class="image" src="contact/Curriculum Inglés. Natalia Lira (1)_page-0001.jpg" alt="atrium"></a>
+    </div>
+    <!-- Agrega más elementos .image-container con las rutas y descripciones de tus imágenes -->
+
+    <div class="sideMenuToggle">
+        <div class="menu-btn"></div>
+    </div>
+
+    <div id="app" class="page-transition"></div>
+
+    <script type="text/javascript" src="https://francescatorzo.it/js/builds/app.js?1670498307"></script>
+</body>
+</html>
